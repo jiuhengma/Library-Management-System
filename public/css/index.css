@@ -1,0 +1,53 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+a{
+    text-decoration: none;
+    color: #5f5f30;
+}
+
+a:hover{color: #8e4700}
+a:visited{color: blue}
+
+.title{
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    font-size: 23px;
+    background-color: #408080;
+    text-align: center;
+}
+
+.content{
+    background-color: lightgreen;
+}
+.content table{
+    width: 100%;
+    text-align: center;
+    border-top: 1px solid brown;
+    border-right: 1px solid brown;
+}
+.content th,td{
+    border-left: 1px solid brown;
+    border-bottom: 1px solid brown;
+    height: 40px;
+    line-height: 40px;
+}
+
+.form{
+    display: none;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+input[type="button"]{
+    margin-left: 130px;
+    width: 60px;
+    height: 20px;
+    /* line-height: 20px; */
+    border-radius: 3px;
+    color: #000000;
+    background-color: #376f6f;
+}

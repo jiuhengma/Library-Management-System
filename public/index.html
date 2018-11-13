@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>图书管理系统</title>
+    <link rel="stylesheet" href="/www/css/index.css">
+    <script src="/www/js/jquery.js"></script>
+    <script src="/www/js/dialog.js"></script>
+    <script src="/www/js/template-web.js"></script>
+    <script src="/www/js/index.js"></script>
+    <script type="text/template" id="indexTpl">
+        {{each list}}
+            <tr>
+                <td>{{$value.id}}</td>
+                <td>{{$value.name}}</td>
+                <td>{{$value.author}}</td>
+                <td>{{$value.category}}</td>
+                <td>{{$value.description}}</td>
+                <td>
+                    <a href="javascript:;">修改</a>&nbsp;|&nbsp;
+                    <a href="javascript:;">删除</a>
+                </td>
+            </tr>
+        {{/each}}
+    </script>
+
+</head>
+<body>
+    <div class="title">
+        <p>图书管理系统
+            <span style="font-size: 18px">&nbsp;&nbsp;<a id="addBookId" href="javascript:;">添加图书</a></span>
+        </p>
+    </div>
+    
+    <div class="content">
+        <table cellpadding="0" cellspacing="0">
+            <thead>
+                <tr>
+                    <th>编号</th>
+                    <th>名称</th>
+                    <th>作者</th>
+                    <th>分类</th>
+                    <th>描述</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody id="dataList">
+                
+            </tbody>
+        </table>
+    </div>
+
+    <form class="form" id="addBookForm">
+        <input type="hidden" name="id">
+        名称：<input type="text" name="name"><br><br>
+        作者：<input type="text" name="author"><br><br>
+        分类：<input type="text" name="category"><br><br>
+        描述：<input type="text" name="description"><br><br>
+        <input type="button" value="提交">
+    </form>
+</body>
+</html>
